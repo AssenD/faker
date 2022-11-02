@@ -1755,18 +1755,15 @@ class Provider(PersonProvider):
     # https://publications.europa.eu/code/bg/bg-5000300.htm
     # and https://publications.europa.eu/code/bg/bg-4100400.htm
 
-    prefixes_female = ("г-жа", "г-ца")
-    prefixes_male = ("г-н",)
-    titles = ("д-р", "проф.", "арх.", "инж.")
+    prefixes_female = ("г-жа", "г-ца", "д-р", "проф.", "арх.", "инж.")
+    prefixes_male = ("г-н", "д-р", "проф.", "арх.", "инж.")
 
     formats_female = OrderedDict(
         (
             ("{{first_name_female}} {{last_name_female}}", 0.50),
             ("{{first_name_female}} {{last_name_female}} {{last_name_female}}", 0.20),
-            ("{{prefix_female}} {{first_name_female}} {{last_name_female}}", 0.10),
-            ("{{title}} {{first_name_female}} {{last_name_female}}", 0.10),
-            ("{{prefix_female}} {{last_name_female}}", 0.05),
-            ("{{title}} {{last_name_female}}", 0.05),
+            ("{{prefix_female}} {{first_name_female}} {{last_name_female}}", 0.20),
+            ("{{prefix_female}} {{last_name_female}}", 0.10),
         )
     )
 
@@ -1774,10 +1771,8 @@ class Provider(PersonProvider):
         (
             ("{{first_name_male}} {{last_name_male}}", 0.50),
             ("{{first_name_male}} {{last_name_male}} {{last_name_male}}", 0.20),
-            ("{{prefix_male}} {{first_name_male}} {{last_name_male}}", 0.10),
-            ("{{title}} {{first_name_male}} {{last_name_male}}", 0.10),
-            ("{{prefix_male}} {{last_name_male}}", 0.05),
-            ("{{title}} {{last_name_male}}", 0.05),
+            ("{{prefix_male}} {{first_name_male}} {{last_name_male}}", 0.20),
+            ("{{prefix_male}} {{last_name_male}}", 0.10),
         )
     )
 
